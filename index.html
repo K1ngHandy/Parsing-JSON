@@ -26,7 +26,7 @@
        PROBLEM 3: Create a JSON string (assign it to the "objJSON" variable) containing a JS object with 3 pairs of arbitrary key/values:
        */
     const {id, type, name} = jsonJS
-    const objJSON = {id, type, name};
+    const objJSON = JSON.stringify({id, type, name}); // convert to string
     console.log(objJSON);
 
     /*
@@ -46,8 +46,8 @@
        */
 
     const badJSON = '{"id": "0001","type": "donut","name": "Cake"}'; // remove comma after "Cake"
-      const parsedJSON = JSON.parse(badJSON);
-    
+    const parsedJSON = JSON.parse(badJSON);
+
   </script>
   <section style="
         border: 2px solid blue;
