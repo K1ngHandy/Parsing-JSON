@@ -35,10 +35,7 @@
        including the traditional "for (const key in obj)" and new methods such as "Object.values()"
        */
     const OBJ = JSON.parse(objJSON);
-    const iterate = () => {
-      console.log(Object.values(OBJ));
-    }
-    iterate();
+    Object.values(OBJ).forEach(value => console.log(value));
 
     /*
        PROBLEM 5 (DEBUGGING): The following JSON string cannot be parsed into a JS object.
@@ -47,6 +44,7 @@
 
     const badJSON = '{"id": "0001","type": "donut","name": "Cake"}'; // remove comma after "Cake"
     const parsedJSON = JSON.parse(badJSON);
+    console.log(parsedJSON);
 
   </script>
   <section style="
